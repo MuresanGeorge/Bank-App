@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerPersonView">
+   <children>
+      <Pane prefHeight="405.0" prefWidth="626.0">
+         <children>
+            <TableView fx:id="tableview" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="268.0">
+              <columns>
+                <TableColumn fx:id="numeCol" prefWidth="97.0" text="Nume" />
+                <TableColumn fx:id="cnpCol" prefWidth="122.0" text="Cnp" />
+                  <TableColumn fx:id="sexCol" prefWidth="48.0" text="Sex" />
+              </columns>
+            </TableView>
+            <TextField fx:id="numeText" layoutX="14.0" layoutY="237.0" promptText="NUME" />
+            <TextField fx:id="cnpText" layoutX="14.0" layoutY="278.0" promptText="CNP" />
+            <TextField fx:id="sexText" layoutX="14.0" layoutY="322.0" promptText="SEX" />
+            <Button layoutX="385.0" layoutY="278.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="25.0" prefWidth="80.0" text="Adaugare" />
+            <Button layoutX="385.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="80.0" text="Stergere" />
+            <Button layoutX="385.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="25.0" prefWidth="80.0" text="Editare" />
+            <TextField fx:id="numeupdateText" layoutX="163.0" layoutY="237.0" promptText="nume_update" />
+            <TextField fx:id="cnpupdateText" layoutX="163.0" layoutY="278.0" promptText="cnp_update" />
+            <TextField fx:id="sexupdateText" layoutX="163.0" layoutY="322.0" promptText="sex_update" />
+            <Button layoutX="527.0" layoutY="278.0" mnemonicParsing="false" onAction="#refresh" text="refresh" />
+         </children>
+      </Pane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
